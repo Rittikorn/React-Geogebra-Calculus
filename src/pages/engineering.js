@@ -7,19 +7,25 @@ import useWindowSize from "../configs/windowSize";
 import truck from "../assets/lotties/truck.json";
 
 function Engineering() {
-  const engEq1 = () => {
+  const engQ1C06 = () => {
     return (
       <p>
-        {" "}
-        {<span className="font-cm text-[16px] font-[300]">h</span>}
-        {". "}
+        I know it is{" "}
+        <span className="font-cm text-[16px] font-[300]">
+          width×length×height
+        </span>
+        , Which is{" "}
+        <span className="font-cm text-[16px] font-[300]">
+          f(h)=h(14−2h)(10−2h)
+        </span>
+        , but how do I get maximum volume by Differentiation method?
       </p>
     );
   };
-  const [engChatQ1, setEngChatQ1] = useState([
+  const engChatQ1 = useRef([
     {
       sender: "Bot",
-      text: "Hello, I am math solving bot. This question does not really require Calculus knowledge, instead, you have to plot a graph by hand yourself, and we do not like that.",
+      text: "Hello, I am math solving bot. This question does not really requires Calculus knowledge, instead, you have to plot a graph by hand yourself, and we do not like that.",
     },
     {
       sender: "Bot",
@@ -39,10 +45,50 @@ function Engineering() {
     },
     {
       sender: "You",
-      text: engEq1(),
+      text: engQ1C06(),
+    },
+    {
+      sender: "Bot",
+      text: "There is a lot of background process, but to simplify the solution, we diff the volume function and make them equal to zero.",
     },
   ]);
+  const engChatQ2 = useRef([
+    {
+      sender: "Bot",
+      text: "Same as before...",
+    },
+    {
+      sender: "Bot",
+      text: "Differentiation is your big friend here, not only in the question, but also all questions we present on this website. So, do you know basic differentiation?",
+    },
+    {
+      sender: "You",
+      text: "Not really...",
+    },
+    {
+      sender: "Bot",
+      text: "That is ok.",
+    },
+    {
+      sender: "Bot",
+      text: "This question wants maximum pond volume. Do you know how to calculate the volume?",
+    },
+    {
+      sender: "You",
+      text: engQ1C06(),
+    },
+    {
+      sender: "Bot",
+      text: "There is a lot of background process, but to simplify the solution, we diff the volume function and make them equal to zero.",
+    },
+  ]);
+  const [engChatA1, setEngChatA1] = useState([]);
+  const [engChatA2, setEngChatA2] = useState([]);
   const [isGgbLoading, setIsGgbloading] = useState(true);
+
+  // useEffect(() => {
+  //   console.log(engChatA1);
+  // }, [engChatA1]);
 
   const engOvRef = useRef(null);
   let userSize = useWindowSize();
@@ -71,7 +117,7 @@ function Engineering() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsGgbloading(false);
-      engOvRef.current.scrollIntoView({ block: "start" });
+      engOvRef?.current?.scrollIntoView({ block: "start" });
     }, 7000);
     return () => clearTimeout(timer);
   }, []);
@@ -108,7 +154,7 @@ function Engineering() {
         <div
           id="engscroll"
           onScroll={handleScroll}
-          className="w-[100vw] h-[100vh] overflow-scroll snap-mandatory snap-y"
+          className="w-[100vw] h-[100vh] overflow-scroll snap-mandatory snap-y scrollbar-hide"
         >
           <div
             className="w-full h-full bg-red-500 bg-cover snap-start"
@@ -127,20 +173,20 @@ function Engineering() {
                     src="/landingBackground.png"
                   />
                 </div>
-                <div className="text-white text-2xl h-[500px] overflow-scroll w-[400px] md:w-[500px] md:h-[400px]">
-                  <div className="px-10 py-7">
-                    <p className="text-white text-xl font-light">
+                <div className="text-white text-2xl h-[500px] overflow-scroll w-[400px] md:w-[500px] md:h-[400px] scrollbar-hide">
+                  <div className="px-10 py-7 text-white text-[16px] md:text-xl">
+                    <p className="font-light">
                       Welcome! If you are not already know, this website
                       features real-world application uses of Calculus,
                       represented by Geogebra graphing tool to fully interact
                       with users!
                     </p>
-                    <p className="text-white text-xl font-light mt-4">
+                    <p className="font-light mt-4">
                       Before we start, viewing from mobile will not be able to
                       use Geogebra, instead, we come up with a stepped solution,
                       simulating by chat UI.
                     </p>
-                    <p className="text-white text-xl font-light mt-4">
+                    <p className="font-light mt-4">
                       Engineering category contains 3 main applications, Civil,
                       Mechanical, and Electrical Engineering respectively.
                     </p>
@@ -161,7 +207,7 @@ function Engineering() {
                 className="flex flex-col bg-white bg-opacity-40 backdrop-blur-xl rounded-xl shadow-lg md:flex-row"
               >
                 <div className="relative w-[400px] h-[150px] md:w-[200px] md:h-[400px] flex">
-                  <h1 class="absolute hidden w-[300px] -ml-[132px] mt-[120px] tracking-widest transform -rotate-90 font-[700] text-center text-2xl text-white md:flex">
+                  <h1 className="absolute hidden w-[300px] -ml-[132px] mt-[120px] tracking-widest transform -rotate-90 font-[700] text-center text-2xl text-white md:flex">
                     DIY KOI POND
                   </h1>
                   <img
@@ -170,14 +216,14 @@ function Engineering() {
                     src="https://vcdn-english.vnecdn.net/2020/09/08/13-4-2-2285-1599537839.jpg"
                   />
                 </div>
-                <div className="text-white text-2xl h-[500px] overflow-scroll w-[400px] md:w-[500px] md:h-[400px]">
-                  <div className="px-10 py-7">
-                    <p className="text-white text-xl font-light">
+                <div className="text-white text-2xl h-[500px] overflow-scroll w-[400px] md:w-[500px] md:h-[400px] scrollbar-hide">
+                  <div className="px-10 py-7 text-white text-[16px] md:text-xl">
+                    <p className="font-light">
                       We all love huge squre pond full of koi in the middle of
                       garden. Regardless, affordable alternative would be a 14
                       inches by 10 inches alluminium sheet with the tip cut.
                     </p>
-                    <p className="text-white text-xl font-light mt-4">
+                    <p className="font-light mt-4">
                       What is the height as show below, to maximize pond volume
                       for our koi to explore?
                     </p>
@@ -209,8 +255,8 @@ function Engineering() {
                 src="https://cdn.discordapp.com/attachments/731849212274147339/1058235164536348812/image.png"
               />
             </div>
-            <div className="bg-black h-full pr-12 pl-12 pt-8 md:col-span-5 md:pr-20 text-white overflow-hidden">
-              <p className="text-lg mb-6">
+            <div className="bg-black h-full pr-12 pl-12 pt-8 md:col-span-5 md:pr-20 text-white overflow-hidden text-[14px] md:text-lg">
+              <p className="mb-6">
                 This question does not require Calculus, solving for the answer.
                 Problem is, only a few people are able to plot a graph out of
                 pond volume function by hand, which is{" "}
@@ -220,7 +266,7 @@ function Engineering() {
                   </span>
                 }
               </p>
-              <p className="text-lg mb-6">
+              <p className="mb-6">
                 Differentiation is your big friend here. We simply diff volume
                 function{" "}
                 {<span className="font-cm text-[16px] font-[300]">f(h)</span>} ,
@@ -231,7 +277,7 @@ function Engineering() {
                   </span>
                 }
               </p>
-              <p className="text-lg">
+              <p className="">
                 If you do not have basic knowledge of differentiation, we
                 simplify the whole solution in to a graph as shown below. Green
                 line represents volume of changable{" "}
@@ -275,7 +321,7 @@ function Engineering() {
                 src="https://cdn.discordapp.com/attachments/731849212274147339/1058235164536348812/image.png"
               />
             </div>
-            <div className="bg-black h-full pr-12 pl-12 pt-8 md:col-span-5 md:pr-20 text-white overflow-hidden text-lg">
+            <div className="bg-black h-full pr-12 pl-12 pt-8 md:col-span-5 md:pr-20 text-white overflow-hidden text-[14px] md:text-lg">
               <p className="mb-6">
                 In order to find maximum volume, make{" "}
                 {<span className="font-cm text-[16px] font-[300]">f'(h)</span>}{" "}
@@ -314,7 +360,7 @@ function Engineering() {
                 className="flex flex-col bg-black bg-opacity-40 backdrop-blur-xl rounded-xl shadow-lg md:flex-row"
               >
                 <div className="relative w-[400px] h-[150px] md:w-[200px] md:h-[400px] flex">
-                  <h1 class="absolute hidden w-[380px] -ml-[170px] mt-[140px] tracking-widest transform -rotate-90 font-[700] text-center text-2xl text-white md:flex">
+                  <h1 className="absolute hidden w-[380px] -ml-[170px] mt-[140px] tracking-widest transform -rotate-90 font-[700] text-center text-2xl text-white md:flex">
                     OPERATION PLUMBOB
                   </h1>
                   <img
@@ -323,17 +369,17 @@ function Engineering() {
                     src="https://static01.nyt.com/images/2022/07/24/world/24sci-china-rocket-sub-top/24sci-china-rocket-sub-top-videoSixteenByNine3000.jpg"
                   />
                 </div>
-                <div className="text-white text-2xl h-[500px] overflow-scroll w-[400px] md:w-[500px] md:h-[400px]">
-                  <div className="px-10 py-7">
-                    <p className="text-white text-xl font-light">
+                <div className="text-white text-2xl h-[500px] overflow-scroll w-[400px] md:w-[500px] md:h-[400px] scrollbar-hide">
+                  <div className="px-10 py-7 text-white text-[16px] md:text-xl">
+                    <p className="font-light">
                       Rocket is fast, but do you know what is faster? A manhole.
                     </p>
-                    <p className="text-white text-xl font-light mt-4">
+                    <p className="font-light mt-4">
                       In the summer of 1957, a nuclear bomb was detonated
                       underground. It was unable to contain the explosion and
                       blasted upwards at an extremely high speed.
                     </p>
-                    <p className="text-white text-xl font-light mt-4">
+                    <p className="font-light mt-4">
                       For simplicity, the distance in feet is given by{" "}
                       {
                         <span className="font-cm text-[18px] font-[300]">
@@ -342,7 +388,7 @@ function Engineering() {
                       }
                       {". "}
                     </p>
-                    <p className="text-white text-xl font-light mt-4">
+                    <p className="font-light mt-4">
                       What is the velocity and acceleration of the manhole after
                       3 seconds?
                     </p>
@@ -357,8 +403,8 @@ function Engineering() {
   } else {
     return (
       <div className="relative bg-black w-full h-[100vh]">
-        <div class="flex snap-x snap-mandatory h-screen w-full mx:auto overflow-y-hidden overflow-x-scroll">
-          <div class="relative snap-start shrink-0 bg-[#F5F5F5] w-full h-screen overflow-hidden">
+        <div className="flex snap-x snap-mandatory h-screen w-full mx:auto overflow-y-hidden overflow-x-scroll">
+          <div className="relative snap-start shrink-0 bg-[#F5F5F5] w-full h-screen overflow-hidden">
             <div
               className="h-[30vh] bg-cover text-white px-6 pt-6"
               style={{ backgroundImage: `url("/landingBackground.png")` }}
@@ -391,7 +437,7 @@ function Engineering() {
               </p>
             </div>
           </div>
-          <div class="relative snap-start shrink-0 bg-orange-200 w-screen h-screen">
+          <div className="relative snap-start shrink-0 bg-orange-200 w-screen h-screen">
             <div
               className="h-[30vh] bg-cover text-white px-6 pt-6"
               style={{
@@ -421,30 +467,33 @@ function Engineering() {
             </div>
           </div>
           <div
-            onClick={() => {}}
-            class="relative snap-start shrink-0 bg-blue-200 w-screen h-screen flex flex-col overflow-hidden"
+            onClick={() => {
+              if (engChatQ1.current.length > 0) {
+                const splicedQ1 = engChatQ1.current.shift();
+                setEngChatA1((oldChatA1) => [...oldChatA1, splicedQ1]);
+              }
+            }}
+            className="relative snap-start shrink-0 bg-blue-200 w-screen h-screen flex flex-col overflow-hidden"
           >
-            <div className="w-full py-3 bg-[#263147]">
+            <div className="w-full py-3 h-[] bg-[#263147]">
               <h1 className="text-xl text-white font-bold -mt-1 w-full text-center">
                 DIY Koi Pond
               </h1>
             </div>
-            <Conversation chat={engChatQ1} />
-            <div
-              onClick={() =>
-                setEngChatQ1((oldChat) => [
-                  ...oldChat,
-                  { sender: "Me", text: "yes" },
-                ])
-              }
-              className="absolute bottom-0 w-full py-4 bg-[#263147] cursor-pointer"
-            >
-              <h1 className="text-xl text-white font-thin -mt-1 w-full text-center">
-                Tap screen to reveal conversation
-              </h1>
+            <Conversation chat={engChatA1} order="1" />
+            <div className="absolute bottom-0 w-full h-[50px] py-4 bg-[#263147] cursor-pointer flex justify-center items-center">
+              {engChatQ1.current.length > 0 ? (
+                <h1 className="text-xl text-white font-thin">
+                  Tap screen to reveal conversation
+                </h1>
+              ) : (
+                <h1 className="text-xl text-white font-thin">
+                  DIY Koi Pond Solved
+                </h1>
+              )}
             </div>
           </div>
-          <div class="relative snap-start shrink-0 bg-orange-200 w-screen h-screen">
+          <div className="relative snap-start shrink-0 bg-orange-200 w-screen h-screen">
             <div
               className="h-[30vh] bg-cover text-white px-6 pt-6"
               style={{
@@ -481,33 +530,36 @@ function Engineering() {
             </div>
           </div>
           <div
-            onClick={() => {}}
-            class="relative snap-start shrink-0 bg-blue-200 w-screen h-screen flex flex-col overflow-hidden"
+            onClick={() => {
+              if (engChatQ2.current.length > 0) {
+                const splicedQ2 = engChatQ2.current.shift();
+                setEngChatA2((oldChatA2) => [...oldChatA2, splicedQ2]);
+              }
+            }}
+            className="relative snap-start shrink-0 bg-blue-200 w-screen h-screen flex flex-col overflow-hidden"
           >
             <div className="w-full py-3 bg-[#263147]">
               <h1 className="text-xl text-white font-bold -mt-1 w-full text-center">
                 Operation Plumbob
               </h1>
             </div>
-            <Conversation chat={engChatQ1} />
-            <div
-              onClick={() =>
-                setEngChatQ1((oldChat) => [
-                  ...oldChat,
-                  { sender: "You", text: "abcdefghi" },
-                ])
-              }
-              className="absolute bottom-0 w-full py-4 bg-[#263147] cursor-pointer"
-            >
-              <h1 className="text-xl text-white font-thin -mt-1 w-full text-center">
-                Tap screen to reveal conversation
-              </h1>
+            <Conversation chat={engChatA2} order="2" />
+            <div className="absolute bottom-0 w-full h-[50px] py-4 bg-[#263147] cursor-pointer flex justify-center items-center">
+              {engChatQ2.current.length > 0 ? (
+                <h1 className="text-xl text-white font-thin">
+                  Tap screen to reveal conversation
+                </h1>
+              ) : (
+                <h1 className="text-xl text-white font-thin">
+                  Operation Plumbob Solved
+                </h1>
+              )}
             </div>
           </div>
-          <div class="relative snap-start shrink-0 bg-blue-200 w-screen h-screen">
+          <div className="relative snap-start shrink-0 bg-blue-200 w-screen h-screen">
             6
           </div>
-          <div class="relative snap-start shrink-0 bg-orange-200 w-screen h-screen">
+          <div className="relative snap-start shrink-0 bg-orange-200 w-screen h-screen">
             7
           </div>
         </div>

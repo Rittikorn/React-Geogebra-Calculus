@@ -32,11 +32,11 @@ function Category() {
             <h1 className="text-6xl mb-14 text-center">
               Three behemoth applications
             </h1>
-            <div className="grid grid-cols-1 gap-8 xl:grid-cols-3 xl:gap-14 overflow-scroll">
+            <div className="grid grid-cols-1 gap-8 xl:grid-cols-3 xl:gap-14 overflow-scroll scrollbar-hide">
               <Link to="/engineering">
                 <div className="rounded-2xl cursor-pointer">
                   <img
-                    class="rounded-2xl"
+                    className="rounded-2xl"
                     src="/engineeringCard.png"
                     alt="engineering"
                   />
@@ -51,7 +51,7 @@ function Category() {
               <Link to="/statistics">
                 <div className="rounded-2xl cursor-pointer">
                   <img
-                    class="rounded-2xl"
+                    className="rounded-2xl"
                     src="/statisticsCard.png"
                     alt="statistics"
                   />
@@ -66,7 +66,7 @@ function Category() {
               <Link to="/economics">
                 <div className="rounded-2xl cursor-pointer">
                   <img
-                    class="rounded-2xl"
+                    className="rounded-2xl"
                     src="/economicsCard.png"
                     alt="econimics"
                   />
@@ -89,14 +89,14 @@ function Category() {
           style={{ backgroundImage: `url("/gradientBackground.png")` }}
         >
           <div className="text-white font-bold w-full h-full flex flex-col justify-center items-center pb-10 pt-2 px-16">
-            <h1 className="text-3xl mb-10 text-center">
+            <h1 className="text-2xl mb-10 mt-4 text-center">
               Three behemoth applications
             </h1>
             <div className="w-screen px-[30%] grid grid-cols-1 gap-4 overflow-scroll">
               <Link to="/engineering">
                 <div className="rounded-2xl cursor-pointer">
                   <img
-                    class="rounded-2xl"
+                    className="rounded-2xl"
                     src="/engineeringCard.png"
                     alt="engineering"
                   />
@@ -111,7 +111,7 @@ function Category() {
               <Link to="/statistics">
                 <div className="rounded-2xl cursor-pointer">
                   <img
-                    class="rounded-2xl"
+                    className="rounded-2xl"
                     src="/statisticsCard.png"
                     alt="statistics"
                   />
@@ -126,7 +126,7 @@ function Category() {
               <Link to="/economics">
                 <div className="rounded-2xl cursor-pointer">
                   <img
-                    class="rounded-2xl"
+                    className="rounded-2xl"
                     src="/economicsCard.png"
                     alt="econimics"
                   />
