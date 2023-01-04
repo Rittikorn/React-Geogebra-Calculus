@@ -6,16 +6,28 @@ const Conversation = ({ chat, order }) => {
   const ref3 = useRef();
 
   const AlwaysScrollToBottom = () => {
-    if (order === "1") ref1?.current?.scrollIntoView();
+    if (order === "1")
+      ref1?.current?.scrollIntoView({
+        block: "nearest",
+        inline: "start",
+      });
     if (order === "2") ref2?.current?.scrollIntoView();
     if (order === "3") ref3?.current?.scrollIntoView();
   };
 
   useEffect(() => {
+    console.log(chat);
     if (chat?.length > 0) AlwaysScrollToBottom();
   }, [chat]);
 
-  if (chat === []) return;
+  if (chat?.length === 0)
+    return (
+      <div className="w-full h-full mb-[50px] overflow-scroll flex justify-center items-center">
+        <p className="text-[2xl] text-white font-bold">
+          Touch the screen to start conversation.
+        </p>
+      </div>
+    );
   else {
     return (
       <div className="w-full h-full px-4 py-4 mb-[50px] overflow-scroll">
@@ -55,7 +67,7 @@ const Conversation = ({ chat, order }) => {
                 className="w-full flex flex-col items-end text-white mb-2"
               >
                 {c.sender !== chat[i - 1]?.sender && (
-                  <p className="text-[#79e278] font-bold pr-4 pt-2"></p>
+                  <p className="font-bold pr-4 pt-2"></p>
                 )}
                 <div className="rounded-lg bg-[#81d248] w-fit max-w-[80%] px-4 py-1">
                   <p className="w-full text-end">{c.text}</p>
