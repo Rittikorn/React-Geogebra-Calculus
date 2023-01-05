@@ -153,6 +153,45 @@ function Engineering() {
       </p>
     );
   };
+  const engQ3C04 = () => {
+    return (
+      <p>
+        First we find current equation,{" "}
+        <span className="font-cm text-[16px] font-[300]">
+          i(t)=dq/dt=(π/4)cos(πt)
+        </span>
+        . Then we find power equation,{" "}
+        <span className="font-cm text-[16px] font-[300]">
+          p(t)=i(t)×v(t)=[(π/4)cos(πt)][sin(πt)]=(π/4)sin(πt)cos(πt)
+        </span>
+        .
+      </p>
+    );
+  };
+  const engQ3C05 = () => {
+    return (
+      <p>
+        Congrats, now you can see the real-world application between Engineering
+        and Calculus. Here is the{" "}
+        <a
+          href="https://www.geogebra.org/classic/ayjtpka2?embed"
+          className="font-[700] underline"
+        >
+          Geogebra
+        </a>{" "}
+        fot this question. Green line represents volume of changable{" "}
+        {<span className="font-cm text-[16px] font-[300]">h</span>}
+        {". "}Green line represents voltage equation. Brown line represents a
+        charge equation. Red line represents a current equation. And blue line
+        represents power equation. You can interact with these graph by toggling
+        and changing equation. if you haven't seen another two applications,
+        statistics and econimics, we highly recommended checking those out!{" "}
+        <a href="/category" className="font-[700] underline">
+          Click this to go back to category page.
+        </a>
+      </p>
+    );
+  };
   const engChatQ1 = useRef([
     {
       sender: "Bot",
@@ -289,8 +328,31 @@ function Engineering() {
       text: engQ2C17(),
     },
   ]);
+  const engChatQ3 = useRef([
+    {
+      sender: "Bot",
+      text: "This problem seems to be complex at first, but this is introduction to electrical from high school, just having Calculus involved.",
+    },
+    {
+      sender: "You",
+      text: "So, we have to diff the charge equation to get current, and then multiply with voltage equation to get power dissipation, correct?",
+    },
+    {
+      sender: "Bot",
+      text: "Like I said, this is a basic eletrical knowledge. Can you solve this by yourself?",
+    },
+    {
+      sender: "You",
+      text: engQ3C04(),
+    },
+    {
+      sender: "Bot",
+      text: engQ3C05(),
+    },
+  ]);
   const [engChatA1, setEngChatA1] = useState([]);
   const [engChatA2, setEngChatA2] = useState([]);
+  const [engChatA3, setEngChatA3] = useState([]);
   const [isGgbLoading, setIsGgbloading] = useState(true);
 
   // useEffect(() => {
@@ -776,8 +838,8 @@ function Engineering() {
                   <div className="px-10 py-7 text-white text-[16px] md:text-xl">
                     <p className="font-light">
                       No, we are not calculating trillion transistors circuit
-                      today. Instead, we go easy with fundamental AC circuit
-                      with capacitor.
+                      today. Instead, we go easy with fundamental electrical
+                      knowledge.
                     </p>
                     <p className="font-light mt-4">
                       Given random unknown circuit that has charge equation as{" "}
@@ -796,7 +858,7 @@ function Engineering() {
                     </p>
                     <p className="font-light mt-4">
                       For the gist of what shown in the background image. Let's
-                      find the heat dissipated from the element and current
+                      find the power dissipated from the element and current
                       passing through it.
                     </p>
                     <p className="font-light mt-4">
@@ -826,7 +888,7 @@ function Engineering() {
               </h1>
               <p className="text-md lg:text-xl font-light mt-4">
                 No, we are not calculating trillion transistors circuit today.
-                Instead, we go easy with fundamental AC circuit with capacitor.
+                Instead, we go easy with fundamental electrical knowledge.
               </p>
               <p className="text-md lg:text-xl font-light mt-4">
                 Given random unknown circuit that has charge equation as{" "}
@@ -842,15 +904,6 @@ function Engineering() {
                   </span>
                 }{" "}
                 volts.
-              </p>
-              <p className="text-md lg:text-xl font-light mt-4">
-                For simplicity, the distance in feet is given by{" "}
-                {
-                  <span className="font-cm font-[300]">
-                    s(t)=−16t<sup>2</sup>+560t
-                  </span>
-                }
-                {". "}
               </p>
               <p className="text-md lg:text-xl font-light mt-4">
                 For the gist of what shown in the background image. Let's find
@@ -875,45 +928,24 @@ function Engineering() {
             </div>
             <div className="bg-black h-full pr-12 pl-12 pt-8 md:col-span-5 md:pr-20 text-white overflow-hidden text-[16px] lg:text-lg">
               <p className="mb-6">
-                Most of vehicles odometer use mph or kph unit. That means
-                velocity can represents as{" "}
-                {<span className="font-cm text-[16px] font-[300]">v=s/t</span>},
-                as we learned from high school.
+                The plan is to diff the charge equation to get the current, then
+                multiply with voltage equation to get power dissipation.
               </p>
               <p className="mb-6">
-                No matters how complicate the distance function is, once it get
-                differentiated by time, it transforms to velocity, which is{" "}
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    ds/dt=−32t+560
+                    i(t)=dq/dt=(π/4)cos(πt)
                   </span>
                 }{" "}
-                or{" "}
-                {
-                  <span className="font-cm text-[16px] font-[300]">
-                    v(t)=−32t+560
-                  </span>
-                }
-                . That means the manhole velocity is 464 unit/s or m/s.
+                Amps
               </p>
-              <p className="">
-                Next, we diff the velocity function by time again, we simply
-                gets acceleration,{" "}
+              <p className="mb-6">
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    −32 m/s<sup>2</sup>
+                    p(t)=i(t)×v(t)=[(π/4)cos(πt)][sin(πt)]=(π/4)sin(πt)cos(πt)
                   </span>
-                }
-                . Notice that{" "}
-                {<span className="font-cm text-[16px] font-[300]">t</span>} is
-                gone. This is normal, as we diff the quadratic function twice,
-                we note this as{" "}
-                {
-                  <span className="font-cm text-[16px] font-[300]">
-                    s&apos;&apos;(t)=v&apos;(t)=a(t)=−32 m/s<sup>2</sup>
-                  </span>
-                }
-                .
+                }{" "}
+                Watts
               </p>
             </div>
           </div>
@@ -924,7 +956,7 @@ function Engineering() {
               </h1>
               <p className="text-md lg:text-xl font-light mt-4">
                 No, we are not calculating trillion transistors circuit today.
-                Instead, we go easy with fundamental AC circuit with capacitor.
+                Instead, we go easy with fundamental electrical knowledge.
               </p>
               <p className="text-md lg:text-xl font-light mt-4">
                 Given random unknown circuit that has charge equation as{" "}
@@ -940,15 +972,6 @@ function Engineering() {
                   </span>
                 }{" "}
                 volts.
-              </p>
-              <p className="text-md lg:text-xl font-light mt-4">
-                For simplicity, the distance in feet is given by{" "}
-                {
-                  <span className="font-cm font-[300]">
-                    s(t)=−16t<sup>2</sup>+560t
-                  </span>
-                }
-                {". "}
               </p>
               <p className="text-md lg:text-xl font-light mt-4">
                 For the gist of what shown in the background image. Let's find
@@ -974,8 +997,9 @@ function Engineering() {
             <div className="bg-black h-full pr-12 pl-12 pt-8 md:col-span-5 md:pr-20 text-white overflow-hidden text-[16px] lg:text-lg">
               <p className="mb-6">
                 We simplify the whole solution in to a graph as shown below.
-                Blue line represents distance function. Orange line represents a
-                velocity function. Purple line represents an acceleration.
+                Green line represents voltage equation. Brown line represents a
+                charge equation. Red line represents a current equation. And
+                blue line represents power equation.
               </p>
               <div className="mt-10 w-full flex justify-center">
                 <iframe
@@ -993,16 +1017,16 @@ function Engineering() {
                 </a>
               </div>
               <p className="mt-4">
-                Thus, the manhole velocity and acceleration at 3 seconds is{" "}
+                Thus, the current and power equation from a circuit are{" "}
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    −32t+560 m/s
+                    (π/4)cos(πt)
                   </span>
                 }{" "}
-                and{" "}
+                amps, and{" "}
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    −32 m/s<sup>2</sup>
+                    (π/4)sin(πt)cos(πt)
                   </span>
                 }{" "}
                 respectively.
@@ -1172,11 +1196,88 @@ function Engineering() {
               </div>
             )}
           </div>
-          <div className="relative snap-start shrink-0 bg-blue-200 w-screen h-screen">
-            6
-          </div>
           <div className="relative snap-start shrink-0 bg-orange-200 w-screen h-screen">
-            7
+            <div
+              className="h-[30vh] bg-cover text-white px-6 pt-6"
+              style={{
+                backgroundImage: `url("https://i.pcmag.com/imagery/articles/05bCKMylhKnlDGyrBCbGYnc-1..v1598629793.jpg")`,
+              }}
+            >
+              <div className="flex flex-row -ml-1">
+                <p className="ml-1 font-light">Electrical Engineering</p>
+              </div>
+              <h1 className="w-full text-3xl font-bold">Maximum Overdrive</h1>
+            </div>
+            <div className="bg-white rounded-t-xl shadow-sm w-full h-full overflow-x-scroll -mt-16 px-6 py-4">
+              <p className="font-light">
+                No, we are not calculating trillion transistors circuit today.
+                Instead, we go easy with fundamental electrical knowledge.
+              </p>
+              <p className="font-light mt-4">
+                Given random unknown circuit that has charge equation as{" "}
+                {
+                  <span className="font-cm text-[16px] font-[300]">
+                    q(t)=(1/4)sin(πt)
+                  </span>
+                }{" "}
+                coulombs, and voltage equation as{" "}
+                {
+                  <span className="font-cm text-[16px] font-[300]">
+                    v(t)=sin(πt)
+                  </span>
+                }{" "}
+                volts.
+              </p>
+              <p className="font-light mt-4">
+                For the gist of what shown in the background image. Let's find
+                the heat dissipated from the element and current passing through
+                it.
+              </p>
+              <p className="font-light mt-4">
+                Hint:{" "}
+                {
+                  <span className="font-cm text-[16px] font-[300]">
+                    i(t)=dq/dt
+                  </span>
+                }{" "}
+                and{" "}
+                {
+                  <span className="font-cm text-[16px] font-[300]">
+                    p(t)=i(t)×v(t)
+                  </span>
+                }
+                .
+              </p>
+            </div>
+          </div>
+          <div
+            onClick={() => {
+              if (engChatQ3.current.length > 0) {
+                const splicedQ3 = engChatQ3.current.shift();
+                setEngChatA3((oldChatA3) => [...oldChatA3, splicedQ3]);
+              }
+            }}
+            className="relative snap-start shrink-0 bg-blue-200 w-screen h-screen flex flex-col overflow-hidden"
+          >
+            <div className="w-full py-3 bg-[#263147]">
+              <h1 className="text-xl text-white font-bold -mt-1 w-full text-center">
+                Maximum Overdrive
+              </h1>
+            </div>
+            <Conversation chat={engChatA3} order="3" />
+            {engChatQ3.current.length > 0 ? (
+              <div className="absolute bottom-0 w-full h-[50px] py-4 bg-[#263147] cursor-pointer flex justify-center items-center">
+                <h1 className="text-xl text-white font-thin">
+                  Tap screen to reveal conversation
+                </h1>
+              </div>
+            ) : (
+              <div className="absolute bottom-0 w-full h-[50px] py-4 bg-[#81d248] cursor-pointer flex justify-center items-center">
+                <h1 className="text-xl text-white font-[700]">
+                  Maximum Overdrive Solved
+                </h1>
+              </div>
+            )}
           </div>
         </div>
       </div>
