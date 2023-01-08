@@ -11,8 +11,16 @@ const Conversation = ({ chat, order }) => {
         block: "nearest",
         inline: "start",
       });
-    if (order === "2") ref2?.current?.scrollIntoView();
-    if (order === "3") ref3?.current?.scrollIntoView();
+    if (order === "2")
+      ref2?.current?.scrollIntoView({
+        block: "nearest",
+        inline: "start",
+      });
+    if (order === "3")
+      ref3?.current?.scrollIntoView({
+        block: "nearest",
+        inline: "start",
+      });
   };
 
   useEffect(() => {

@@ -1038,7 +1038,7 @@ function Engineering() {
     );
   } else {
     return (
-      <div className="relative bg-black w-full h-screen">
+      <div className="w-full h-full">
         <div className="flex snap-x snap-mandatory h-full w-full mx:auto overflow-y-hidden overflow-x-scroll">
           <div className="relative snap-start shrink-0 bg-[#F5F5F5] w-full h-screen overflow-hidden">
             <div

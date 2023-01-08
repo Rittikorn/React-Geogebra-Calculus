@@ -19,7 +19,7 @@ function Category() {
     return sourceLoaded;
   };
 
-  const loaded = useProgressiveImage("/landingBackground.png");
+  const loaded = useProgressiveImage("/gradientBackground.png");
 
   if (loaded) {
     if (userSize.width >= 450) {
@@ -28,11 +28,26 @@ function Category() {
           className="min-w-full h-[100vh] flex flex-row bg-cover justify-center items-center"
           style={{ backgroundImage: `url("/gradientBackground.png")` }}
         >
-          <div className="text-white font-bold w-full h-full flex flex-col justify-center items-center pb-10 pt-6 px-16">
-            <h1 className="text-6xl mb-14 text-center">
+          <div className="text-white font-bold w-full h-full flex flex-col justify-center items-center pb-10 pt-10 px-16">
+            <h1 className="text-4xl md:text-6xl mb-14 text-center">
               Three behemoth applications
             </h1>
             <div className="grid grid-cols-1 gap-8 xl:grid-cols-3 xl:gap-14 overflow-scroll scrollbar-hide">
+              <Link to="/economics">
+                <div className="rounded-2xl cursor-pointer">
+                  <img
+                    className="rounded-2xl"
+                    src="/economicsCard.png"
+                    alt="econimics"
+                  />
+                  <div className="flex flex-row justify-center items-center mt-2">
+                    <div className="w-[30px] h-[30px]">
+                      <Lottie animationData={timer} />
+                    </div>
+                    <p className="font-thin text-center ml-1">15 min</p>
+                  </div>
+                </div>
+              </Link>
               <Link to="/engineering">
                 <div className="rounded-2xl cursor-pointer">
                   <img
@@ -63,21 +78,6 @@ function Category() {
                   </div>
                 </div>
               </Link>
-              <Link to="/economics">
-                <div className="rounded-2xl cursor-pointer">
-                  <img
-                    className="rounded-2xl"
-                    src="/economicsCard.png"
-                    alt="econimics"
-                  />
-                  <div className="flex flex-row justify-center items-center mt-2">
-                    <div className="w-[30px] h-[30px]">
-                      <Lottie animationData={timer} />
-                    </div>
-                    <p className="font-thin text-center ml-1">15 min</p>
-                  </div>
-                </div>
-              </Link>
             </div>
           </div>
         </div>
@@ -88,11 +88,26 @@ function Category() {
           className="min-w-full h-[100vh] flex flex-row bg-cover justify-center items-center"
           style={{ backgroundImage: `url("/gradientBackground.png")` }}
         >
-          <div className="text-white font-bold w-full h-full flex flex-col justify-center items-center pb-10 pt-2 px-16">
-            <h1 className="text-2xl mb-10 mt-4 text-center">
+          <div className="text-white font-bold w-full h-full flex flex-col justify-center items-center pb-6 px-16">
+            <h1 className="text-2xl mb-10 mt-2 text-center">
               Three behemoth applications
             </h1>
             <div className="w-screen px-[30%] grid grid-cols-1 gap-4 overflow-scroll">
+              <Link to="/economics">
+                <div className="rounded-2xl cursor-pointer">
+                  <img
+                    className="rounded-2xl"
+                    src="/economicsCard.png"
+                    alt="econimics"
+                  />
+                  <div className="flex flex-row justify-center items-center mt-2">
+                    <div className="w-[25px] h-[25px]">
+                      <Lottie animationData={timer} />
+                    </div>
+                    <p className="font-thin text-center text-sm ml-1">15 min</p>
+                  </div>
+                </div>
+              </Link>
               <Link to="/engineering">
                 <div className="rounded-2xl cursor-pointer">
                   <img
@@ -120,21 +135,6 @@ function Category() {
                       <Lottie animationData={timer} />
                     </div>
                     <p className="font-thin text-center text-sm ml-1">8 min</p>
-                  </div>
-                </div>
-              </Link>
-              <Link to="/economics">
-                <div className="rounded-2xl cursor-pointer">
-                  <img
-                    className="rounded-2xl"
-                    src="/economicsCard.png"
-                    alt="econimics"
-                  />
-                  <div className="flex flex-row justify-center items-center mt-2">
-                    <div className="w-[25px] h-[25px]">
-                      <Lottie animationData={timer} />
-                    </div>
-                    <p className="font-thin text-center text-sm ml-1">15 min</p>
                   </div>
                 </div>
               </Link>
