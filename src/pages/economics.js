@@ -55,13 +55,22 @@ function Economics() {
       </p>
     );
   };
-  const engQ1C14 = () => {
+  const ecmQ1C15 = () => {
     return (
       <p>
-        Not so fast. You see, the pond length is{" "}
-        <span className="font-cm text-[16px] font-[300]">10−2h</span>. That
-        means <span className="font-cm text-[16px] font-[300]">h</span> cannot
-        be more than 5 inches.
+        Anyway, Here is the{" "}
+        <a
+          href="https://www.geogebra.org/classic/y6jnykyz?embed"
+          className="font-[700] underline"
+        >
+          Geogebra
+        </a>{" "}
+        fot this question. Pink line represents revenue equation{" "}
+        {<span className="font-cm text-[16px] font-[300]">R</span>}
+        {". "}Blue Line represents a revenue equation after differentiation
+        process. You can interact with these graphs by toggling and changing
+        subsciption price. Let's move on to the next question to get better
+        picture about differentiation.
       </p>
     );
   };
@@ -240,7 +249,7 @@ function Economics() {
     },
     {
       sender: "Bot",
-      text: "What can I say. This world is a bit unfair.",
+      text: ecmQ1C15(),
     },
   ]);
   const engChatQ2 = useRef([
@@ -504,57 +513,55 @@ function Economics() {
           </div>
           <div className="w-full h-full snap-start flex md:grid md:grid-cols-7">
             <div className="hidden bg-white px-6 pt-8 md:col-span-2 md:flex md:flex-col md:col-span-2 md:row-span-1 h-full overflow-hidden">
-              <h1 className="text-lg lg:text-2xl font-[700]">DIY Koi Pond</h1>
+              <h1 className="text-lg lg:text-2xl font-[700]">Gimme Love</h1>
               <p className="text-md lg:text-xl font-light mt-4">
-                We all love huge squre pond full of koi in the middle of garden.
-                Regardless, affordable alternative would be a 14 inches by 10
-                inches alluminium sheet with the tip cut.
+                All OnlyFans performers have to maximize revenue. The more
+                expensive your subscription plan is, the less customer per
+                month.
               </p>
               <p className="text-md lg:text-xl font-light mt-4">
-                What is the height h as show below, to maximize pond volume for
-                our koi to explore?
+                Let's say 50 dollars can give 1,200 subscribers a good time, and
+                each 5 dollars the price raises, the less 50 people can keep up
+                with.
               </p>
-              <img
-                className="mt-6 rounded-lg"
-                alt="eng-q1img"
-                src="https://cdn.discordapp.com/attachments/731849212274147339/1058235164536348812/image.png"
-              />
+              <p className="text-md lg:text-xl font-light mt-4">
+                Find the perfect spot for subscription price and total income.
+                This question alone may change your career path.
+              </p>
             </div>
             <div className="bg-black h-full pr-12 pl-12 pt-8 md:col-span-5 md:pr-20 text-white overflow-hidden text-[16px] lg:text-lg">
               <p className="mb-6">
-                This question does not require Calculus, solving for the answer.
-                Problem is, only a few people are able to plot a graph out of
-                pond volume function by hand, which is{" "}
-                {
-                  <span className="font-cm text-[16px] font-[300]">
-                    f(h)=h(14−2h)(10−2h)
-                  </span>
-                }
+                Before getting start, we have to get better picture about
+                "Revenue", a total income by product of price and quantity,
+                which can describe as{" "}
+                {<span className="font-cm text-[16px] font-[300]">R=pq</span>}.
               </p>
               <p className="mb-6">
-                Differentiation is your big friend here. We simply diff volume
-                function{" "}
-                {<span className="font-cm text-[16px] font-[300]">f(h)</span>} ,
-                which is{" "}
+                If we stop paying attention to Calculus and work on revenue
+                equation, we can see that quantity is in linear scale, as the
+                question describe: "each 5 dollars the price raises, the less 50
+                people can keep up with". Regardless, that line is{" "}
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    f'(h)=12h<sup>2</sup>−96h+140
+                    q=1700−10p
                   </span>
                 }
+                .
               </p>
               <p className="">
-                If you do not have basic knowledge of differentiation, we
-                simplify the whole solution in to a graph as shown below. Green
-                line represents volume of changable{" "}
-                {<span className="font-cm text-[16px] font-[300]">h</span>}
-                {". "}Blue Line represents a volume fuction after
-                differentiated. You can interact with these graph by toggling
-                and changing volume.
+                Theoretically, we do not need Calculus to solve this question,
+                as we know that revenue equation is{" "}
+                {
+                  <span className="font-cm text-[16px] font-[300]">
+                    R=p(1700−10p)
+                  </span>
+                }
+                , which is parabola.
               </p>
               <div className="mt-10 w-full flex justify-center">
                 <iframe
                   title="iframee1"
-                  src="https://www.geogebra.org/classic/huswxbhn?embed"
+                  src="https://www.geogebra.org/classic/y6jnykyz?embed"
                   width="700"
                   height="400"
                   style={{ borderRadius: "0.4em" }}
@@ -562,54 +569,63 @@ function Economics() {
                 ></iframe>
               </div>
               <div className="w-full flex justify-center mt-2">
-                <a href="https://www.geogebra.org/classic/huswxbhn?embed">
-                  geogebra.org/classic/huswxbhn?embed
+                <a href="https://www.geogebra.org/classic/y6jnykyz?embed">
+                  geogebra.org/classic/y6jnykyz?embed
                 </a>
               </div>
             </div>
           </div>
           <div className="w-full h-full snap-start flex md:grid md:grid-cols-7">
             <div className="hidden bg-white px-6 pt-8 md:col-span-2 md:flex md:flex-col md:col-span-2 md:row-span-1 h-full overflow-hidden">
-              <h1 className="text-lg lg:text-2xl font-[700]">DIY Koi Pond</h1>
+              <h1 className="text-lg lg:text-2xl font-[700]">Gimme Love</h1>
               <p className="text-md lg:text-xl font-light mt-4">
-                We all love huge squre pond full of koi in the middle of garden.
-                Regardless, affordable alternative would be a 14 inches by 10
-                inches alluminium sheet with the tip cut.
+                All OnlyFans performers have to maximize revenue. The more
+                expensive your subscription plan is, the less customer per
+                month.
               </p>
               <p className="text-md lg:text-xl font-light mt-4">
-                What is the height h as show below, to maximize pond volume for
-                our koi to explore?
+                Let's say 50 dollars can give 1,200 subscribers a good time, and
+                each 5 dollars the price raises, the less 50 people can keep up
+                with.
               </p>
-              <img
-                className="mt-6 rounded-lg"
-                alt="eng-q1img"
-                src="https://cdn.discordapp.com/attachments/731849212274147339/1058235164536348812/image.png"
-              />
+              <p className="text-md lg:text-xl font-light mt-4">
+                Find the perfect spot for subscription price and total income.
+                This question alone may change your career path.
+              </p>
             </div>
             <div className="bg-black h-full pr-12 pl-12 pt-8 md:col-span-5 md:pr-20 text-white overflow-hidden text-[16px] lg:text-lg">
               <p className="mb-6">
-                In order to find maximum volume, make{" "}
-                {<span className="font-cm text-[16px] font-[300]">f'(h)</span>}{" "}
-                equals to zero, which is{" "}
-                {
-                  <span className="font-cm text-[16px] font-[300]">
-                    0=12h<sup>2</sup>−96h+140
-                  </span>
-                }
-                . Then, solve the quadratic equation to find{" "}
-                {<span className="font-cm text-[16px] font-[300]">h</span>},
-                which is 1.92 and 6.08 inches.
+                But, in real world application, revenue equation may absense in
+                logarithmic or square root form, and this is when
+                differentiation, a Calculus tool, is your handy friend.
               </p>
               <p className="mb-6">
-                Can we use both answers? If we take a look at the pond with,{" "}
-                {<span className="font-cm text-[16px] font-[300]">10−2h</span>},
-                the maximum height allowed is only upto 5 inches! That means the
-                only correct answer is 1.92 inches.
+                Diffentiation is a process in Calculus, where we find the
+                instantaneous rate of change in function based on one of its
+                variables. Which means, it is easier way to find maximum revenue
+                from changing price.
+              </p>
+              <p className="mb-6">
+                To be precise, we can represent a revenue equation after
+                differentiation process as,{" "}
+                {
+                  <span className="font-cm text-[16px] font-[300]">
+                    R'(p)=dR/dp=1700−20p
+                  </span>
+                }
+                . And in order to find maximum revenue, we make the diffed
+                equation equal to zero, which is{" "}
+                {
+                  <span className="font-cm text-[16px] font-[300]">
+                    0=1700−20p
+                  </span>
+                }
+                .
               </p>
               <p>
-                Thus, the height{" "}
-                {<span className="font-cm text-[16px] font-[300]">h</span>} for
-                maximum koi pond volume is 1.92 inches.
+                Finally, after solving for price, the answer will be 85 dollars
+                of subscription plan. That means, total income or revenue will
+                be 72,250 dollars.
               </p>
             </div>
           </div>
