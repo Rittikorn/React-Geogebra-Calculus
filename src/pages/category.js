@@ -44,7 +44,7 @@ function Category() {
                     <div className="w-[30px] h-[30px]">
                       <Lottie animationData={timer} />
                     </div>
-                    <p className="font-thin text-center ml-1">15 min</p>
+                    <p className="font-thin text-center ml-1">8 min</p>
                   </div>
                 </div>
               </Link>
@@ -59,7 +59,7 @@ function Category() {
                     <div className="w-[30px] h-[30px]">
                       <Lottie animationData={timer} />
                     </div>
-                    <p className="font-thin text-center ml-1">10 min</p>
+                    <p className="font-thin text-center ml-1">15 min</p>
                   </div>
                 </div>
               </Link>
@@ -74,7 +74,7 @@ function Category() {
                     <div className="w-[30px] h-[30px]">
                       <Lottie animationData={timer} />
                     </div>
-                    <p className="font-thin text-center ml-1">8 min</p>
+                    <p className="font-thin text-center ml-1">3 min</p>
                   </div>
                 </div>
               </Link>
@@ -104,7 +104,7 @@ function Category() {
                     <div className="w-[25px] h-[25px]">
                       <Lottie animationData={timer} />
                     </div>
-                    <p className="font-thin text-center text-sm ml-1">15 min</p>
+                    <p className="font-thin text-center text-sm ml-1">8 min</p>
                   </div>
                 </div>
               </Link>
@@ -119,7 +119,7 @@ function Category() {
                     <div className="w-[25px] h-[25px]">
                       <Lottie animationData={timer} />
                     </div>
-                    <p className="font-thin text-center text-sm ml-1">10 min</p>
+                    <p className="font-thin text-center text-sm ml-1">15 min</p>
                   </div>
                 </div>
               </Link>
@@ -134,7 +134,7 @@ function Category() {
                     <div className="w-[25px] h-[25px]">
                       <Lottie animationData={timer} />
                     </div>
-                    <p className="font-thin text-center text-sm ml-1">8 min</p>
+                    <p className="font-thin text-center text-sm ml-1">3 min</p>
                   </div>
                 </div>
               </Link>

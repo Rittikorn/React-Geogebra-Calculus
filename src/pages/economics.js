@@ -596,45 +596,50 @@ function Economics() {
             </div>
             <div className="bg-black h-full pr-12 pl-12 pt-8 md:col-span-5 md:pr-20 text-white overflow-hidden text-[16px] lg:text-lg">
               <p className="mb-6">
-                Most of vehicles odometer use mph or kph unit. That means
-                velocity can represents as{" "}
-                {<span className="font-cm text-[16px] font-[300]">v=s/t</span>},
-                as we learned from high school.
-              </p>
-              <p className="mb-6">
-                No matters how complicate the distance function is, once it get
-                differentiated by time, it transforms to velocity, which is{" "}
+                Profit is revenue subtracted by cost of production, or{" "}
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    ds/dt=−32t+560
-                  </span>
-                }{" "}
-                or{" "}
-                {
-                  <span className="font-cm text-[16px] font-[300]">
-                    v(t)=−32t+560
+                    P(x)=R(x)−C(x)
                   </span>
                 }
-                . That means the manhole velocity is 464 unit/s or m/s.
-              </p>
-              <p className="">
-                Next, we diff the velocity function by time again, we simply
-                gets acceleration,{" "}
+                . According to this question,{" "}
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    −32 m/s<sup>2</sup>
+                    R(x)=2500x
                   </span>
                 }
-                . Notice that{" "}
-                {<span className="font-cm text-[16px] font-[300]">t</span>} is
-                gone. This is normal, as we diff the quadratic function twice,
-                we note this as{" "}
+                , and{" "}
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    s&apos;&apos;(t)=v&apos;(t)=a(t)=−32 m/s<sup>2</sup>
+                    C(x)=2x<sup>3</sup>−75x<sup>2</sup>+400x+900
+                  </span>
+                }
+                . Thus, profit equation is{" "}
+                {
+                  <span className="font-cm text-[16px] font-[300]">
+                    P(x)=−(2x<sup>3</sup>−75x<sup>2</sup>−2100x+900)
                   </span>
                 }
                 .
+              </p>
+              <p className="mb-6">
+                When it's come to parabola. differentiation is an easier and
+                faster solution to find maximum value, instead of formating the
+                function. Regardless, we make the diffed profit equation equals
+                to zero, which is{" "}
+                {
+                  <span className="font-cm text-[16px] font-[300]">
+                    P'(x)=dP/dx=−6x<sup>2</sup>+150x<sup>2</sup>+2100=0
+                  </span>
+                }
+                . As we solving the quadretic equation, we find out that there
+                is two answers, −10 and 35.
+              </p>
+              <p className="">
+                {<span className="font-cm text-[16px] font-[300]">x</span>}{" "}
+                represents amount of request or subscriber, it can not be a
+                negative value. Thus, 35 requests will make the most profit out
+                of this month.
               </p>
             </div>
           </div>
@@ -674,8 +679,10 @@ function Economics() {
             <div className="bg-black h-full pr-12 pl-12 pt-8 md:col-span-5 md:pr-20 text-white overflow-hidden text-[16px] lg:text-lg">
               <p className="mb-6">
                 We simplify the whole solution in to a graph as shown below.
-                Blue line represents distance function. Orange line represents a
-                velocity function. Purple line represents an acceleration.
+                Blue line represents profit equation. Orange line represents a
+                profit function after differentiation process. Amount of
+                subscriber, along with graph visibility, can be change and
+                simulate.
               </p>
               <div className="mt-10 w-full flex justify-center">
                 <iframe
@@ -693,19 +700,13 @@ function Economics() {
                 </a>
               </div>
               <p className="mt-4">
-                Thus, the manhole velocity and acceleration at 3 seconds is{" "}
+                In real life, cost equation will not be like this, but the 35
+                requests usually are real perfect amount for performers.{" "}
                 {
-                  <span className="font-cm text-[16px] font-[300]">
-                    −32t+560 m/s
-                  </span>
-                }{" "}
-                and{" "}
-                {
-                  <span className="font-cm text-[16px] font-[300]">
-                    −32 m/s<sup>2</sup>
-                  </span>
-                }{" "}
-                respectively.
+                  <a href="/category" className="font-[700] underline">
+                    Click this to go back to category page.
+                  </a>
+                }
               </p>
             </div>
           </div>

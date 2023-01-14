@@ -59,8 +59,8 @@ function Landing() {
           style={{ backgroundImage: `url("/landingBackground.png")` }}
         >
           <div className="max-w-full px-8 py-10 flex flex-col">
-            <h1 className="text-6xl text-center leading-tight text-white font-bold lg:text-8xl">
-              We beg to DIFFer
+            <h1 className="text-5xl text-center leading-tight text-white font-bold lg:text-8xl">
+              WE BEG TO <span className="underline italic">DIFF</span>ER
             </h1>
             <div className="pt-10 max-w-full">
               <p className="text-lg text-center font-thin text-white">

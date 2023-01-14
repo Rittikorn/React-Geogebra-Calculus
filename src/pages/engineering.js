@@ -86,7 +86,7 @@ function Engineering() {
         >
           Geogebra
         </a>{" "}
-        fot this question. Green line represents volume of changable{" "}
+        for this question. Green line represents volume of changable{" "}
         {<span className="font-cm text-[16px] font-[300]">h</span>}
         {". "}Blue Line represents a volume fuction after differentiated. You
         can interact with these graph by toggling and changing volume. Anyway,
@@ -1029,7 +1029,12 @@ function Engineering() {
                     (π/4)sin(πt)cos(πt)
                   </span>
                 }{" "}
-                respectively.
+                respectively.{" "}
+                {
+                  <a href="/category" className="font-[700] underline">
+                    Click this to go back to category page.
+                  </a>
+                }
               </p>
             </div>
           </div>
