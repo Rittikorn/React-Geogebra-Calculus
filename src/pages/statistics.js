@@ -56,7 +56,7 @@ function Statistics() {
   const engChatQ1 = useRef([
     {
       sender: "Bot",
-      text: "Hello, I am math solving bot. Unlike other category, this question must require basic differentiation knowledge. I recommends check out the economics or engineering section first.",
+      text: "Hello, I am math solving bot. Unlike other category, this question must require basic differentiation knowledge. I reccommends check out the economics or engineering section first.",
     },
     {
       sender: "Bot",

@@ -127,7 +127,7 @@ function Economics() {
           Geogebra
         </a>{" "}
         fot this question. Blue line represents profit equation{" "}
-        {<span className="font-cm text-[16px] font-[300]">R</span>}
+        {<span className="font-cm text-[16px] font-[300]">P</span>}
         {". "}Orange Line represents a profit equation after differentiation
         process. You can interact with these graphs by toggling and changing
         amount of request. If you haven't seen another two applications,

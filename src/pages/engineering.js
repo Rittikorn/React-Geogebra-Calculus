@@ -144,7 +144,7 @@ function Engineering() {
         >
           Geogebra
         </a>{" "}
-        fot this question. Green line represents volume of changable{" "}
+        for this question. Green line represents volume of changable{" "}
         {<span className="font-cm text-[16px] font-[300]">h</span>}
         {". "}Blue Line represents a volume fuction after differentiated. You
         can interact with these graph by toggling and changing volume. Let's
