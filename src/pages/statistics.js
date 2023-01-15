@@ -13,11 +13,11 @@ function Statistics() {
         When you diff some equation, do it both side. For example, the diffed
         population equation is{" "}
         <span className="font-cm text-[16px] font-[300]">
-          P'(t)=t<sup>2</sup>+64
+          P'(t)=−t<sup>2</sup>+64
         </span>{" "}
         or{" "}
         <span className="font-cm text-[16px] font-[300]">
-          dP/dt=t<sup>2</sup>+64
+          dP/dt=−t<sup>2</sup>+64
         </span>
         .
       </p>
@@ -26,8 +26,8 @@ function Statistics() {
   const stcQ1C06 = () => {
     return (
       <p>
-        <span className="font-cm text-[16px] font-[300]">P'(4)=80</span> and{" "}
-        <span className="font-cm text-[16px] font-[300]">P'(8)=128</span>.
+        <span className="font-cm text-[16px] font-[300]">P'(4)=48</span> and{" "}
+        <span className="font-cm text-[16px] font-[300]">P'(8)=0</span>.
       </p>
     );
   };
@@ -42,8 +42,8 @@ function Statistics() {
           Geogebra
         </a>{" "}
         for this question. Pay attention to a green line, which is population
-        function. Between year 4 and 8, the graph is increasingly increase, but
-        at year 10 to 20, Columbus will be facing with huge problem. Which can
+        function. Between year 4 and 8, the graph is decreasingly increase, but
+        after 8.3 years, Columbus will be facing with huge problem. Which can
         model as a red line, a parabola graph that tell us about the population
         trend. If you haven't seen another two applications, engineering and
         statics, we highly recommended checking those out!{" "}
@@ -84,11 +84,11 @@ function Statistics() {
     },
     {
       sender: "You",
-      text: "The population is surely growing in Columbus, but the diffed value is also increasing. So, increasingly increase?",
+      text: "The population is surely growing in Columbus, but the diffed value is decreasing. So, decreasingly increase?",
     },
     {
       sender: "Bot",
-      text: "That is correct. The population graph is curving up between at 4 and 8 years. Regardless, there are another 3 types of trend, decresingly increase, increasingly decrease, and decreasingly decrease.",
+      text: "That is correct. By the way, there are another 3 types of trend, decresingly increase, increasingly decrease, and decreasingly decrease.",
     },
     {
       sender: "You",
@@ -359,13 +359,13 @@ function Statistics() {
                 example, the diffed population function is{" "}
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    P'(t)=t<sup>2</sup>+64
+                    P'(t)=−t<sup>2</sup>+64
                   </span>
                 }{" "}
                 or{" "}
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    dP/dt=t<sup>2</sup>+64
+                    dP/dt=−t<sup>2</sup>+64
                   </span>
                 }
                 . This is called "rate of change of the population".
@@ -376,17 +376,17 @@ function Statistics() {
                 equals to 4 and 8, which is{" "}
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    P'(4)=80
+                    P'(4)=48
                   </span>
                 }
                 , and{" "}
                 {
                   <span className="font-cm text-[16px] font-[300]">
-                    P'(8)=128
+                    P'(8)=0
                   </span>
                 }
                 . That means the population in Columbus is surely increasing,
-                but it is increaingly increase, as seen from the green line
+                but it is decreaingly increase, as seen from the green line
                 graph.
               </p>
               <p>

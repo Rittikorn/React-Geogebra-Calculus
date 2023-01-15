@@ -179,13 +179,12 @@ function Engineering() {
         >
           Geogebra
         </a>{" "}
-        fot this question. Green line represents volume of changable{" "}
-        {<span className="font-cm text-[16px] font-[300]">h</span>}
-        {". "}Green line represents voltage equation. Brown line represents a
-        charge equation. Red line represents a current equation. And blue line
-        represents power equation. You can interact with these graph by toggling
-        and changing equation. if you haven't seen another two applications,
-        statistics and econimics, we highly recommended checking those out!{" "}
+        fot this question. Green line represents voltage equation. Brown line
+        represents a charge equation. Red line represents a current equation.
+        And blue line represents power equation. You can interact with these
+        graph by toggling and changing equation. if you haven't seen another two
+        applications, statistics and econimics, we highly recommended checking
+        those out!{" "}
         <a href="/category" className="font-[700] underline">
           Click this to go back to category page.
         </a>
